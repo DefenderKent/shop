@@ -12,9 +12,10 @@ import {PostCard} from './src/screens/PostCard/PostCard';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {Favorite} from './src/screens/Favorite/Favorite';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 
 const Stack = createStackNavigator();
-
+const MainNavigator = createDrawerNavigator();
 const Tab = createBottomTabNavigator();
 
 function App() {
@@ -124,6 +125,22 @@ function App() {
       </Stack.Navigator>
     );
   }
+
+  function MyDrawer() {
+    return (
+      <MainNavigator.Navigator>
+        <MainNavigator.Screen name="Home" component={MyTabs} />
+        <MainNavigator.Screen
+          name="Favorite"
+          component={StackNavigateFavorite}
+        />
+        <MainNavigator.Screen
+          name="Settings"
+          component={StackNavigateSetting}
+        />
+      </MainNavigator.Navigator>
+    );
+  }
   function MyTabs() {
     return (
       <Tab.Navigator>
@@ -135,7 +152,8 @@ function App() {
   }
   return (
     <NavigationContainer>
-      <MyTabs />
+      <MyDrawer />
+      {/* <MyTabs /> */}
     </NavigationContainer>
   );
 }
