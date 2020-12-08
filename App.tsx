@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {View, Text, Button, Alert} from 'react-native';
+import {View, Text, Button, Alert, StatusBar} from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import {useEffect} from 'react';
@@ -152,6 +152,7 @@ function App() {
   }
   return (
     <NavigationContainer>
+      <StatusBar barStyle={'dark-content'} backgroundColor={'white'} />
       <MyDrawer />
       {/* <MyTabs /> */}
     </NavigationContainer>
