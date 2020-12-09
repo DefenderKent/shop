@@ -6,7 +6,7 @@ import {styles} from './style';
 interface ScreenMainProps {}
 export const ScreenMain: React.FC<ScreenMainProps> = ({navigation}) => {
   return (
-    <View>
+    <View style={{flex: 1, backgroundColor: 'green'}}>
       <Text style={styles.title}>MainScreen</Text>
       <Button
         onPress={() => navigation.navigate('Settings')}

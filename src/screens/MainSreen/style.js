@@ -5,4 +5,8 @@ export const styles = StyleSheet.create({
     width: '100%',
     height: 200,
   },
+  title: {
+    fontSize: 18,
+    backgroundColor: 'green',
+  },
 });
