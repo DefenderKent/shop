@@ -1,3 +1,3 @@
 # Shop
-# yarn 
-# yarn android
+yarn 
+yarn android
