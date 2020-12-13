@@ -1,11 +1,9 @@
 import React, {RefObject} from 'react';
 
 import {StackActions, CompositeNavigationProp} from '@react-navigation/native';
+import {IRootNav, Ref} from './interfaces';
 
-export let navigationRef: RefObject<CompositeNavigationProp<
-  any,
-  any
->> = React.createRef();
+export const navigationRef = new Ref<IRootNav>();
 // let _navigator: NavigationScreenProp<any, any>;
 
 function setTopLevelNavigator(

@@ -9,7 +9,7 @@ import {HeaderTitle} from '@react-navigation/stack';
 interface CardSreenProps {}
 export const CardSreen: React.FC<CardSreenProps> = ({navigation}) => {
   const goToPost = (post) => {
-    navigation.navigate('Post', {post});
+    navigation.navigate('PostCard', {post});
   };
   const removeHandler = () => {
     Alert.alert(

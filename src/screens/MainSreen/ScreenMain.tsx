@@ -9,7 +9,7 @@ export const ScreenMain: React.FC<ScreenMainProps> = ({navigation}) => {
     <View style={{flex: 1, backgroundColor: 'green'}}>
       <Text style={styles.title}>MainScreen</Text>
       <Button
-        onPress={() => navigation.navigate('Settings')}
+        onPress={() => navigation.navigate('loginScreen')}
         title=" Go home"
       />
     </View>

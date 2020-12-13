@@ -6,16 +6,12 @@ import {ScreenMain} from '../../screens/MainSreen/ScreenMain';
 import {AuthStack} from '../AuthStack';
 import {HomeStack} from '../HomeStack';
 import {navigationRef} from '../NavigationService';
+import {RootNavigator} from '../RootNavigation';
 
 export const Router: React.FC = () => {
-  const AppStack = createStackNavigator();
-
   return (
     <NavigationContainer ref={navigationRef}>
-      <AppStack.Navigator initialRouteName={'Auth'} headerMode="none">
-        <AppStack.Screen name={'Auth'} component={AuthStack}></AppStack.Screen>
-        <AppStack.Screen name={'Home'} component={HomeStack}></AppStack.Screen>
-      </AppStack.Navigator>
+      <RootNavigator isAuthorized={true != null} />
     </NavigationContainer>
   );
 };

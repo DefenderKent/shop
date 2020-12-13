@@ -1,7 +1,7 @@
 import React from 'react';
 import {View, Text, Alert} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
-import {DATA} from './../../../data';
+import {DATA} from '../../../data';
 import {Post} from '../../components/Post';
 
 import {HeaderTitle, StackNavigationProp} from '@react-navigation/stack';
@@ -13,19 +13,13 @@ interface IProps {
   navigation: StackNavigationProp<RootStackParamList>;
   route: IRootRoute<NavigationPages.home>;
 }
-export const Favorite: React.FC<IProps> = ({navigation, route}: IProps) => {
-  const goToPost = (post) => {
-    navigation.navigate('Post', {post});
-  };
-
+export const SettingsProfile: React.FC<IProps> = ({
+  navigation,
+  route,
+}: IProps) => {
   return (
     <View>
-      <Text>MainScreen</Text>
-      <FlatList
-        data={DATA.filter((i) => i.booked)}
-        keyExtractor={(item) => item.id.toString()}
-        renderItem={(item) => <Post data={item.item} onOpen={goToPost} />}
-      />
+      <Text>SettingsProfile</Text>
     </View>
   );
 };
