@@ -2,16 +2,11 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import {View} from 'react-native';
-import {DrawerParamList, RootStackParamList} from '../interfaces';
-import {NavigationPages, DrawerPages} from '../pages';
-import {ScreenMain} from '../../screens/MainSreen/ScreenMain';
+import {RootStackParamList} from '../interfaces';
+import {DrawerPages} from '../pages';
 import {NoHeader} from '../../components/NoHeader';
 import {Tabs} from '../Tabs';
 import {DrawerContent, Drawers} from '../Drawer';
-import {HomeStack} from '../HomeStack';
-import {createDrawerNavigator} from '@react-navigation/drawer';
-import {Settings} from '../../screens/Settings/Settings';
 
 interface IProps {
   isAuthorized: boolean;
