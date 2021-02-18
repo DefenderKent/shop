@@ -11,6 +11,7 @@ export type RootStackParamList = {
   [NavigationPages.auth]: undefined;
   [NavigationPages.postCard]: undefined;
   [NavigationPages.loginScreen]: undefined;
+  [NavigationPages.homeScreen]: undefined;
 
   [NavigationPages.homeProfile]: {
     prefix: string;

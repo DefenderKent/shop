@@ -1,11 +1,9 @@
 import React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
 
-import {ScreenMain} from '../../screens/MainSreen/ScreenMain';
 import {Stack} from '../RootNavigation';
 import {LoginScreen} from '../../screens/LoginScreen';
-import {PostCard} from '../../screens/PostCard/PostCard';
 import {NavigationPages} from '../pages';
+import {HomeScreen} from '../../screens';
 
 export const HomeStack = () => {
   return (
@@ -16,8 +14,8 @@ export const HomeStack = () => {
         headerTitle: 'Root',
         headerTitleAlign: 'center',
       }}>
-      <Stack.Screen name={NavigationPages.homeProfile} component={ScreenMain} />
-      <Stack.Screen name={NavigationPages.postCard} component={PostCard} />
+      <Stack.Screen name={NavigationPages.homeScreen} component={HomeScreen} />
+
       <Stack.Screen
         name={NavigationPages.loginScreen}
         component={LoginScreen}

@@ -1,15 +1,10 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
-
-import {ImageURISource, View} from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
-import {CardSreen} from '../../screens/CardSreen/CardSreen';
+import {CardSreen} from '../../screens/CardScreen/CardScreen';
 import {Favorite} from '../../screens/Favorite/Favorite';
-import {ScreenMain} from '../../screens/MainSreen/ScreenMain';
-import {PostCard} from '../../screens/PostCard/PostCard';
 import {Settings} from '../../screens/Settings/Settings';
-
 import {HomeStack} from '../HomeStack';
 import {MainTabParamList} from '../interfaces';
 import {TabPages} from '../pages';

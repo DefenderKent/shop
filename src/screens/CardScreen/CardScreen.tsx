@@ -1,22 +1,23 @@
 import React from 'react';
-import {View, Text, Alert, FlatList} from 'react-native';
-import {StackNavigationProp} from '@react-navigation/stack';
-
-import {DATA} from './../../../data';
+import {View, Text} from 'react-native';
+import {FlatList} from 'react-native-gesture-handler';
+import {DATA} from '../../../data';
 import {Post} from '../../components/Post';
-import {NavigationPages} from '../../navigation/pages';
+
+import {StackNavigationProp} from '@react-navigation/stack';
 import {IRootRoute, RootStackParamList} from '../../navigation/interfaces';
+import {NavigationPages} from '../../navigation/pages';
 
 interface IProps {
   navigation: StackNavigationProp<RootStackParamList>;
-  route: IRootRoute<NavigationPages.settingsProfile>;
+  route: IRootRoute<NavigationPages.postCard>;
 }
-export const Favorite: React.FC<IProps> = ({navigation, route}: IProps) => {
+export const CardSreen: React.FC<IProps> = ({navigation}) => {
   return (
     <View>
-      <Text>Favorite</Text>
+      <Text>MainScreen</Text>
       <FlatList
-        data={DATA.filter((i) => i.booked)}
+        data={DATA}
         keyExtractor={(item) => item.id.toString()}
         renderItem={(item) => (
           <Post

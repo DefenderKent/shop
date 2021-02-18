@@ -1,6 +1,7 @@
 export enum NavigationPages {
   auth = 'auth',
   homeProfile = 'homeProfile',
+  homeScreen = 'homeScreen',
   tab = 'tab',
   settingsProfile = 'settingsProfile',
   postCard = 'postCard',

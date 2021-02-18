@@ -4,9 +4,10 @@ import {createStackNavigator} from '@react-navigation/stack';
 
 import {RootStackParamList} from '../interfaces';
 import {DrawerPages} from '../pages';
-import {NoHeader} from '../../components/NoHeader';
+
 import {Tabs} from '../Tabs';
 import {DrawerContent, Drawers} from '../Drawer';
+import {noHeader} from '../helpers';
 
 interface IProps {
   isAuthorized: boolean;
@@ -21,7 +22,7 @@ export const RootNavigator = React.memo(
         <Drawers.Screen
           name={DrawerPages.home}
           component={Tabs}
-          options={NoHeader}
+          options={noHeader}
         />
         {props.isAuthorized
           ? console.log('isAuthorized')

@@ -1,8 +1,7 @@
 import {StackNavigationOptions} from '@react-navigation/stack';
+import {Colors} from '../../../style/style';
 
-import {Colors, COLOR_THEM} from '../../style/style';
-
-export const NoHeader: StackNavigationOptions = {
+export const noHeader: StackNavigationOptions = {
   headerShown: false,
   cardStyle: {backgroundColor: Colors.white},
 };

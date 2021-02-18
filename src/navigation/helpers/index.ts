@@ -1,0 +1,1 @@
+export {noHeader} from './noHeader';

@@ -7,15 +7,12 @@ import {IRootRoute, RootStackParamList} from '../../navigation/interfaces';
 
 interface IProps {
   navigation: StackNavigationProp<RootStackParamList>;
-  route: IRootRoute<NavigationPages.homeProfile>;
+  route: IRootRoute<NavigationPages.homeScreen>;
 }
-export const SettingsProfile: React.FC<IProps> = ({
-  navigation,
-  route,
-}: IProps) => {
+export const HomeScreen: React.FC<IProps> = ({navigation, route}: IProps) => {
   return (
     <View>
-      <Text>homeProfile</Text>
+      <Text>HomeScreen</Text>
     </View>
   );
 };
